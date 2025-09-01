@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
     <ClerkProvider>
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className}`}
+        className={`${inter.className} min-h-screen flex flex-col`}
       >
         <ThemeProvider
             attribute="class"
@@ -37,11 +37,11 @@ export default function RootLayout({ children }) {
             {/* {header} */}
             <Header />
 
-            <main className="min-h-screen">
+            <main className="flex-1">
               {children}
             </main>
             {/*footer*/}
-            <footer className="bg-muted/50 p py-12">
+            <footer className="bg-muted/50 py-12 mt-auto">
               <div className="container mx-auto px-4 text-center text-gray-200">
                 <p>Made with ❤️ and lots of coffee </p>
               </div>
